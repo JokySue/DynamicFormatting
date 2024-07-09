@@ -1,0 +1,53 @@
+<!-- dynamic-formatting.component.html -->
+<div class="colLayout">     <!-- colLayout，col表示是列布局 -->
+    <div>
+        <h1>数据和属性绑定</h1>
+    </div>
+
+    <div>
+        <hr>
+    </div>
+
+    <div class="rowLayout">     <!-- rowLayout，row表示是行布局 -->
+        <div>
+            <h2 title="这是直接显示的学生信息">学生信息</h2>
+            <div class="box">
+                <div>学号：{{stuID}}</div>
+                <div>姓名：{{name}}</div>
+                <!-- 属性绑定 -->
+                <div [class]="passed? 'green': 'red' ">成绩：{{score}}</div>
+            </div>
+        </div>
+
+        <div>
+            <h2 title="{{myClass}}">班级信息</h2> <!-- 数据绑定 -->
+            <div class="box">
+                <div>班级名称：{{clasInfo.className}}</div>
+                <div>班导师姓名：{{clasInfo.teacherName}}</div>
+                <div>学生人数：{{clasInfo.stuNum}}</div>
+            </div>
+        </div>
+
+        <div>
+            <h2 [title]='myUniversity'>学校信息</h2> <!-- 属性绑定 -->
+            <div class="box">
+                <div>学校名称：{{uniInfo.uniName}}</div>
+                <div>教师人数：{{uniInfo.teacherNum}}</div>
+                <div>学生人数：{{uniInfo.stuNum}}</div>
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <h1>数据绑定和属性绑定HTML代码的区别</h1>
+        <div>数据绑定方式：{{myHTML}}</div> <!-- 数据绑定HTML代码 -->
+        <div style="display: inline-flex;">
+            <h2>属性绑定方式：</h2>
+            <div [innerHTML]='myHTML'></div> <!-- 属性绑定HTML代码 -->
+        </div>
+
+        <div>
+            <h3>利用数据绑定实现算术运算：3 + 5 = {{ 3 + 5 }} </h3>
+        </div>
+    </div>
+</div>

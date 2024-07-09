@@ -1,0 +1,41 @@
+/** dynamic-formatting.component.scss */
+.colLayout {
+    //列布局样式类
+    display       : flex;
+    flex-direction: column;
+    text-align    : center;    //文本居中
+}
+
+.rowLayout {
+    //行布局样式类
+    display        : flex;
+    flex-direction : row;
+    justify-content: center;    //水平居中
+}
+
+.box {
+    //边框样式类
+    border       : 2px solid black;
+    border-radius: 10px;
+    display      : inline-block;
+    font-size    : 20px;
+    text-align   : justify;
+    padding      : 20px;
+    margin       : 20px;
+}
+
+.red {
+    //红色样式类
+    color          : red;
+    font-weight    : bolder;
+    font-style     : italic;
+    text-decoration: underline;
+}
+
+.green {
+    //绿色样式类
+    color          : green;
+    font-weight    : bolder;
+    font-style     : italic;
+    text-decoration: underline;
+}
